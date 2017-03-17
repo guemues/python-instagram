@@ -1,14 +1,22 @@
 #!/usr/bin/env python
 from setuptools import setup, find_packages
+import os
 
-setup(name="python-instagram-ext",
-      version="1.3.9",
+try:
+    import pypandoc
+    long_description = pypandoc.convert('README.md', 'rst')
+except(IOError, ImportError):
+    long_description = open('README.md').read()
+
+setup(
+      name="python-instagram-fixed",
+      version="1.0",
       description="Life extended Instagram API client",
       license="MIT",
       install_requires=["simplejson", "httplib2", "six"],
-      author="Seraphicer",
-      author_email="tomoyuki.kakuda@gmail.com",
-      url="https://github.com/Seraphicer/python-instagram-ext.git",
+      author="Orcun Gumus",
+      author_email="gumus@somed.io",
+      url="https://github.com/guemues/python-instagram-fixed",
       packages = find_packages(),
-      keywords= "instagram",
-      zip_safe = True)
+      keywords= "instagram"
+)
