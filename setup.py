@@ -4,7 +4,7 @@ import os
 
 setup(
       name="python-instagram-fixed",
-      version="1.0",
+      version="1.0.2",
       description="Life extended Instagram API client",
       license="MIT",
       install_requires=["simplejson", "httplib2", "six"],
