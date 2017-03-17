@@ -2,12 +2,6 @@
 from setuptools import setup, find_packages
 import os
 
-try:
-    import pypandoc
-    long_description = pypandoc.convert('README.md', 'rst')
-except(IOError, ImportError):
-    long_description = open('README.md').read()
-
 setup(
       name="python-instagram-fixed",
       version="1.0",
