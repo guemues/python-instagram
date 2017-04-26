@@ -116,7 +116,7 @@ def bind_method(**config):
           
         def _do_api_request(self, url, method="GET", body=None, headers=None):
             headers = headers or {}
-            if self.signature and self.api.client_ips != None and self.api.client_secret != None:
+            if self.signature and self.api.client_ips is not None and self.api.client_secret is not None:
                 secret = self.api.client_secret
                 ips = self.api.client_ips
                 signature = hmac.new(secret, ips, sha256).hexdigest()

@@ -128,6 +128,7 @@ class InstagramAPI(oauth2.OAuth2API):
                 root_class=User,
                 response_type="entry")
 
+    # TODO: More parameters: https://www.instagram.com/developer/endpoints/locations/
     location_recent_media = bind_method(
                 path="/locations/{location_id}/media/recent",
                 accepts_parameters=MEDIA_ACCEPT_PARAMETERS + ['location_id'],
