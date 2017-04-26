@@ -2,6 +2,7 @@
 
 import types
 import six
+
 try:
     import simplejson as json
 except ImportError:
@@ -70,7 +71,7 @@ class InstagramAuthTests(unittest.TestCase):
         redirect_uri = self.unauthenticated_api.get_authorize_login_url()
         assert redirect_uri
         print("Please visit and authorize at:\n%s" % redirect_uri)
-        code = raw_input("Paste received code (blank to skip): ").strip()
+        code = input("Paste received code (blank to skip): ").strip()
         if not code:
             return
 
@@ -80,7 +81,7 @@ class InstagramAuthTests(unittest.TestCase):
     def test_xauth_exchange(self):
         """ Your client ID must be authorized for xAuth access; email
             xauth@instagram.com for access"""
-        username = raw_input("Enter username for XAuth (blank to skip): ").strip()
+        username = input("Enter username for XAuth (blank to skip): ").strip()
         if not username:
             return
         password = getpass.getpass("Enter password for XAuth (blank to skip): ").strip()
