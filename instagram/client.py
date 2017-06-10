@@ -3,7 +3,7 @@ from .bind import bind_method
 from .models import MediaShortcode, Media, User, Location, Tag, Comment, Relationship
 
 MEDIA_ACCEPT_PARAMETERS = ["count"]
-SEARCH_ACCEPT_PARAMETERS = ["q", "count"]
+SEARCH_ACCEPT_PARAMETERS = ["distance", "count"]
 
 SUPPORTED_FORMATS = ['json']
 
