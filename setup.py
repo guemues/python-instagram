@@ -10,7 +10,7 @@ setup(
       install_requires=["simplejson", "httplib2", "six"],
       author="Orcun Gumus",
       author_email="gumus@somed.io",
-      url="https://github.com/guemues/python-instagram-fixed",
+      url="https://github.com/somedanalytics/python-instagram-fixed",
       packages=find_packages(),
       keywords="instagram"
 )
